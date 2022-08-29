@@ -20,3 +20,4 @@ if __name__ == "__main__":
     print(
         "Escribir una funcion que recibe el año actual y el año de nacimiento, usando la funcion anterior enviando esta como argumento obtenga el mensaje: 'Hola <nombre> tienes <edad> años'")
     print(funcion3(2022, 2003, "Cristian")) # Se imprime el valor del resultado que retorna la funcion a llamar funcion3 metiendo los 3 parametros que pide
+# Cristian Larios ©
