@@ -5,17 +5,17 @@ el año de nacimiento y el año actual retornando el mensaje "Hola <nombre>, tie
 
 def funcion1(nombre:str, anoactual:int, anonac:int)->str:       # Funcion que pide un dato de tipo str y dos datos de tipo int
     edad = anoactual - anonac   # Calculamos la edad restando el año actual al año de nacimiento
-    return f"Hola <{nombre}>, tienes <{edad}> años"     # Retornamos el valor de una cadena "Hola <nombre>, tienes <edad> años"
+    return f"Hola {nombre}, tienes {edad} años"     # Retornamos el valor de una cadena "Hola <nombre>, tienes <edad> años"
     #return f"Hola <{nombre}>, tienes <{anoactual - anonac}> años"  # Retornamos el valor de una cadena "Hola <nombre>, tienes <edad> años"
 
 def funcion2(nombre:str, anoactual:int, anonac:int)->str:       # Funcion que pide un dato de tipo str y dos datos de tipo int
-    return f"Hola <{nombre}>, tienes <{anoactual - anonac}> años"  # Retornamos el valor de una cadena "Hola <nombre>, tienes <edad> años"
+    return f"Hola {nombre}, tienes {anoactual - anonac} años"  # Retornamos el valor de una cadena "Hola <nombre>, tienes <edad> años"
 
 def calcular_edad( anoactual:int, anonac:int)->int:      # Funcion que pide un dato de tipo str y dos datos de tipo int
     return anoactual-anonac
 
 def funcion3(nombre:str, anoactual:int, anonac:int)->str:    # Funcion que pide un dato de tipo str y dos datos de tipo int y retorna un valor str
-    return f"Hola <{nombre}> tienes <{calcular_edad(anoactual, anonac)}> años"  # Imprime una cadena junto con los valores que ingresamos
+    return f"Hola {nombre}, tienes {calcular_edad(anoactual, anonac)} años"  # Imprime una cadena junto con los valores que ingresamos
 
 
 if __name__ == "__main__":

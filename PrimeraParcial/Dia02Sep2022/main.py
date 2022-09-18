@@ -44,6 +44,6 @@ def multitablas(numtablas:int,num:int,total:int)->int:    # Funcion que recibe t
 
 if __name__ == "__main__":
     tablamultiplicar(1, 10)     # Manda a llamar la funcion de la tablademultiplicar dando dos parametros para que la misma funcione
-    multitablas(10, 1, 10)      # Manda a llamar la funcion de multitablas dando tres parametros para que la misma funcione
+    multitablas(3, 1, 10)      # Manda a llamar la funcion de multitablas dando tres parametros para que la misma funcione
     
 #Cristian Larios ©
