@@ -148,7 +148,7 @@ Tabla de multiplicar del 1
 
 ### Ejercicio 1.7 Hacer una funcion que haga n tablas de multiplicar de n hasta n numeros con n numeros de la tabla de multiplicar de la misma
 ### 1.1 Descripcion del ejercicio
-Crear una funcion que en sus hints los argumentos sean 3 de tipo de dato int y retorne 
+Crear una funcion que en sus hints los argumentos sean 3 de tipo de dato int y retorne un valor de tipo de dato int. La funcion hará uso de la anterior funcion del ejercicio pasado. Y finalmente tendrá que imprimir una lista de tablas de multiplicar hasta n numero, de algun numero hasta n numero.
 ### 1.2 Código
 ```python
 def multitablas(numtablas:int,num:int,total:int)->int:    
