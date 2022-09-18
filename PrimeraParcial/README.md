@@ -13,7 +13,7 @@ def funcion1(a: str, b: str) -> str:
  print(funcion1("Hola", "Cristian"))
  ```
 #### 1.4 Salida
-```python
+```
 Hola Cristian
 ```
 
@@ -30,7 +30,7 @@ def funcion2(a: str, b: int) -> str:
 print(funcion2("Cristian", 18))
 ```
 #### 1.4 Salida
-```python
+```
 Hola Cristian tienes 18 años
 ```
 
@@ -48,7 +48,7 @@ def funcion3(a: int, b: int, c: str) -> str:
 print(funcion3(2022, 2003, "Cristian"))
 ```
 #### 1.4 Salida
-```python
+```
 Hola Cristian tienes 19 años
 ```
 
@@ -73,7 +73,7 @@ print(c.cuadrado(a))
 print(multiplicar(a,b))
 ```
 #### 1.4 Salida
-```python
+```
 15
 5
 2.0
@@ -107,7 +107,7 @@ print(res)
 print(funcion3("Cristian", 2022, 2003))
 ```
 #### 1.4 Salida
-```python
+```
 Hola Cristian, tienes 19 años
 Hola Cristian, tienes 19 años
 Hola Cristian, tienes 19 años
@@ -132,7 +132,7 @@ def tablamultiplicar(num:int,total:int)->int:
 tablamultiplicar(1, 10)
 ```
 #### 1.4 Salida
-```python
+```
 Tabla de multiplicar del 1
 1  x 1  =   1
 1  x 2  =   2
@@ -164,7 +164,7 @@ def multitablas(numtablas:int,num:int,total:int)->int:
 multitablas(3, 1, 10)
 ```
 ### 1.4 Salida
-```python
+```
 Tablas de multiplicar de 1 hasta 3
 Tabla de multiplicar del 1
 1  x 1  =   1
