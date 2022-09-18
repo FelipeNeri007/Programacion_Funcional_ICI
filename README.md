@@ -1,3 +1,7 @@
-Programas, codigos y notas basadas en la Programacion Funcional en Python
-por Cristian Larios ©
-![20170717020730_python-logo](https://user-images.githubusercontent.com/96441511/187102392-7114929e-6d1f-4940-b90e-3d630966da38.png)
+![UDC_logo](https://user-images.githubusercontent.com/96441511/190881118-cbb6a280-2d9a-4276-8d20-66e9550b2db5.png)
+
+# Facultad de Ingeniería Mecánica y Eléctrica
+## Ingeniería en Computación Inteligente
+### Programación Funcional
+### Estudiante: Cristian Armando Larios Bravo
+### Profesor: Dr. Walter Alexander Mata López 
