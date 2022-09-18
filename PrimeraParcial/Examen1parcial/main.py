@@ -11,7 +11,7 @@ from opciones.opcion6 import opcion6
 
 if __name__ == "__main__":
     
-    opc = 0 # Para correr las opciones del tercer menu
+    opc = 0 # Para correr las opciones del menu principal
     opc2 = 0 # Para correr las opciones de retorno
 
     ids = []
