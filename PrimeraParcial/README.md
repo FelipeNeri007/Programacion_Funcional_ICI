@@ -2,7 +2,7 @@
 ## Problemas resueltos en clase con Python3
 ### Ejercicio 1.1. Escribir una funcion que reciba dos argumentos de tipo string e imprima en pantalla "Hola {argumento1} tienes {argumento2} años"
 ### 1.1 Descripcion del ejercicio
-  Se necesita crear una funcion que en sus argumentos los hints sean argumento1 como tipo de dato str y arugmento2 como tipo de dato str y el valor de salida será de tipo string y posteriormente mandarla a llamar introduciendole sus argumentos
+  Se necesita crear una funcion que en sus argumentos los hints sean argumento1 como tipo de dato str y arugmento2 como tipo de dato str y el valor de salida será de tipo string y posteriormente mandarla a llamar introduciendole sus argumentos.  Y finalmente imprimirá en pantalla "Hola {nombre} tienes {edad} años".
 #### 1.2 Código
 ```python
 def funcion1(a: str, b: str) -> str:
@@ -19,7 +19,7 @@ Hola Cristian
 
 ### Ejercicio 1.2 Escribir una funcion que reciba el nombre y la edad de una persona. EL mensaje de saluda tiene que ser: "Hola {nombre} tienes {edad} años"
 #### 1.1 Descripcion del ejercicio
-Se necesita crear una funcion que en sus argumentos los hints sean argumento1 como tipo de dato str y arugmento2 como tipo de dato int y el valor de salida será de tipo string y posteriormente mandarla a llamar introduciendole sus argumentos
+Se necesita crear una funcion que en sus argumentos los hints sean argumento1 como tipo de dato str y arugmento2 como tipo de dato int y el valor de salida será de tipo string y posteriormente mandarla a llamar introduciendole sus argumentos.  Y finalmente imprimirá en pantalla "Hola {nombre} tienes {edad} años".
 #### 1.2 Código
 ```python
 def funcion2(a: str, b: int) -> str:  
@@ -36,7 +36,7 @@ Hola Cristian tienes 18 años
 
 ### Ejercicio 1.3 Escribir una funcion que recibe el año actual y el año de nacimiento, usando la funcion anterior enviando esta como argumento obtenga el mensaje: "Hola {nombre} tienes {edad} años"
 #### 1.1 Descripcion del ejercicio
-Se necesita crear una funcion que en sus argumentos los hints sean argumento1 como tipo de dato int, argumento2 como tipo de dato int y argumento3 como tipo de dato str y el valor de salida sea de tipo string, se debe usar la funcion del anterior ejercicio dentro de esta funcion para hacer el proceso.
+Se necesita crear una funcion que en sus argumentos los hints sean argumento1 como tipo de dato int, argumento2 como tipo de dato int y argumento3 como tipo de dato str y el valor de salida sea de tipo string, se debe usar la funcion del anterior ejercicio dentro de esta funcion para hacer el proceso. Y finalmente imprimirá en pantalla "Hola {nombre} tienes {edad} años".
 #### 1.2 Código
 ```python
 def funcion3(a: int, b: int, c: str) -> str:
@@ -80,47 +80,125 @@ print(multiplicar(a,b))
 100
 50
 ```
-### Ejercicio 1.5 
+### Ejercicio 1.5 Hacer una funcion que reciba el nombre de una persona y el año de nacimiento de una persona el año de nacimiento y el año actual retornando el mensaje "Hola {nombre}, tienes {edad} años"
 #### 1.1 Descripcion del ejercicio
+Se necesita crear una funcion que en sus argumentos los hints sean argumento1 como tipo de dato int, argumento2 como tipo de dato int y argumento3 como tipo de dato int y el valor de retorne un valor de tipo str. La funcion imprimira en pantalla el mensaje "Hola {nombre}, tienes {edad} años".
 #### 1.2 Código
 ```python
+def funcion1(nombre:str, anoactual:int, anonac:int)->str:  
+    edad = anoactual - anonac   
+    return f"Hola {nombre}, tienes {edad} años"
 
+def funcion2(nombre:str, anoactual:int, anonac:int)->str:    
+    return f"Hola {nombre}, tienes {anoactual - anonac} años"
+
+def calcular_edad( anoactual:int, anonac:int)->int:      
+    return anoactual-anonac
+
+def funcion3(nombre:str, anoactual:int, anonac:int)->str:   
+    return f"Hola {nombre}, tienes {calcular_edad(anoactual, anonac)} años"  
 ```
 #### 1.3 Implementación
 ```python
-
+print(funcion1("Cristian", 2022, 2003))      
+print(funcion2("Cristian", 2022, 2003))  
+res = funcion1("Cristian", 2022, 2003)   
+print(res)      
+print(funcion3("Cristian", 2022, 2003))
 ```
 #### 1.4 Salida
 ```python
-
+Hola Cristian, tienes 19 años
+Hola Cristian, tienes 19 años
+Hola Cristian, tienes 19 años
+Hola Cristian, tienes 19 años
 ```
 
-### Ejercicio 1.6
+### Ejercicio 1.6 Escriba una funcion que genere una tabla de multiplicar recibiendo como argumento la cantidad de numeros y la tabla a generar
 #### 1.1 Descripcion del ejercicio
+Se necesita crear una funcion que en sus argumentos los hints sean dos valores de tipo de dato int y retorne la multiplicacion de uno por el otro. Posteriormente Escribir una funcion que haga uso de la funcion anterior y que en sus argumentos los hints sean 3 argumentos de tipo de dato int y retorne y tipo de dato int. Y finalmente imprimirá en pantalla una tabla de multiplicar de algun numero hasta n numero.
 #### 1.2 Código
 ```python
+def multiplicar2numeros(x:int,y:int)->int: return x*y
 
+def tablamultiplicar(num:int,total:int)->int:
+    print(f"Tabla de multiplicar del {num}")
+    for i in range(1, total+1):           
+        print(f"{num:<3}x{i:^4}={multiplicar2numeros(i,num):>4}")   
+    return 0
 ```
 #### 1.3 Implementación
 ```python
-
+tablamultiplicar(1, 10)
 ```
 #### 1.4 Salida
 ```python
-
+Tabla de multiplicar del 1
+1  x 1  =   1
+1  x 2  =   2
+1  x 3  =   3
+1  x 4  =   4
+1  x 5  =   5
+1  x 6  =   6
+1  x 7  =   7
+1  x 8  =   8
+1  x 9  =   9
+1  x 10 =  10
 ```
 
-### Ejercicio 1.7 
+### Ejercicio 1.7 Hacer una funcion que haga n tablas de multiplicar de n hasta n numeros con n numeros de la tabla de multiplicar de la misma
 ### 1.1 Descripcion del ejercicio
+Crear una funcion que en sus hints los argumentos sean 3 de tipo de dato int y retorne 
 ### 1.2 Código
 ```python
-
+def multitablas(numtablas:int,num:int,total:int)->int:    
+    print(f"Tablas de multiplicar de 1 hasta {numtablas}") 
+    for i in range(1, numtablas+1):
+        tablamultiplicar(num,total)
+        print()  
+        num+=1   
+    return 0
 ```
 ### 1.3 Implementación
 ```python
-
+multitablas(3, 1, 10)
 ```
 ### 1.4 Salida
 ```python
+Tablas de multiplicar de 1 hasta 3
+Tabla de multiplicar del 1
+1  x 1  =   1
+1  x 2  =   2
+1  x 3  =   3
+1  x 4  =   4
+1  x 5  =   5
+1  x 6  =   6
+1  x 7  =   7
+1  x 8  =   8
+1  x 9  =   9
+1  x 10 =  10
 
+Tabla de multiplicar del 2
+2  x 1  =   2
+2  x 2  =   4
+2  x 3  =   6
+2  x 4  =   8
+2  x 5  =  10
+2  x 6  =  12
+2  x 7  =  14
+2  x 8  =  16
+2  x 9  =  18
+2  x 10 =  20
+
+Tabla de multiplicar del 3
+3  x 1  =   3
+3  x 2  =   6
+3  x 3  =   9
+3  x 4  =  12
+3  x 5  =  15
+3  x 6  =  18
+3  x 7  =  21
+3  x 8  =  24
+3  x 9  =  27
+3  x 10 =  30
 ```
