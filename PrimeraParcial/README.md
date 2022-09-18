@@ -6,7 +6,7 @@
 #### 1.2 Código
 ```python
 def funcion1(a: str, b: str) -> str:
-    return f"<{a}> <{b}>"
+    return f"{a} {b}"
 ```
  #### 1.3 Implementación
  ```python
