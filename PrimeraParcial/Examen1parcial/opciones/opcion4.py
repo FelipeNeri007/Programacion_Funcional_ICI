@@ -28,7 +28,7 @@ def opcion4(opc2:int, ids:list, existencias:list) -> int:
             else:
                 break
         except:
-            print("Opcion invalida, regresando al menu...5...4...3...2...1")
+            print("Opcion invalida, regresando al menu principal...5...4...3...2...1")
             time.sleep(5)
             os.system("cls")
             break
