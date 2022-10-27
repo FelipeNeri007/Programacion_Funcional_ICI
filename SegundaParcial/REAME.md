@@ -23,18 +23,53 @@ void main(List<String> args) {
 
 ### Ejercicio 1.2. calculadora que lea dos numeros del teclado y obtenga suma, resta, multiplicación y division, usando funciones y asingnado valores a dos variables
 ### 1.1 Descripcion del ejercicio
-  
+  Se necesita crear una funcion que indique operacion se va a realizar (suma, resta, multiplicacion o división) y crear varias funciones para hacer la operacion ingresada por el usuario. 
 #### 1.2 Código
 ```dart
+String leerDatos(String mensaje) {
+  print(mensaje);
+  String data = (stdin.readLineSync()!);
+  return data;
+}
 
+String calculadora(String op, int n1, int n2) {
+  if (op == "+") {
+    return "$n1 + $n2 = ${suma(n1, n2)}";
+  } else if (op == "-") {
+    return "$n1 - $n2 = ${resta(n1, n2)}";
+  } else if (op == "*") {
+    return "$n1 * $n2 = ${multi(n1, n2)}";
+  } else if (op == "/") {
+    return "$n1 / $n2 = ${divi(n1, n2)}";
+  } else {
+    return "Operación inválida";
+  }
+}
+
+int suma(int num1, int num2) => num1 + num2;
+int resta(int num1, int num2) => num1 - num2;
+int multi(int num1, int num2) => num1 * num2;
+int divi(int num1, int num2) => num1 ~/ num2;
 ```
  #### 1.3 Implementación
  ```dart
- 
+ import 'dart:io';
+void main() {
+  String op = leerDatos("Indica la operación [+,-,*,/]");
+  int num1 = int.parse(leerDatos("Dame el primer número"));
+  int num2 = int.parse(leerDatos("Dame el segundo número"));
+  print("${calculadora(op, num1, num2)}");
+}
  ```
 #### 1.4 Salida
 ```
-
+Indica la operación [+,-,*,/]
++
+Dame el primer número
+3
+Dame el segundo número
+4
+3 + 4 = 7
 ```
 
 ### Ejercicio 1.3
