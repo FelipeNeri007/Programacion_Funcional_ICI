@@ -21,7 +21,7 @@ void main(List<String> args) {
 0: 1 | 1: 2 | 2: 3 | 3: 4 | 
 ```
 
-### Ejercicio 1.2. calculadora que lea dos numeros del teclado y obtenga suma, resta, multiplicación y division, usando funciones y asingnado valores a dos variables
+### Ejercicio 1.2. Calculadora que lea dos numeros del teclado y obtenga suma, resta, multiplicación y division, usando funciones y asingnado valores a dos variables
 ### 1.1 Descripcion del ejercicio
   Se necesita crear una funcion que indique operacion se va a realizar (suma, resta, multiplicacion o división) y crear varias funciones para hacer la operacion ingresada por el usuario. 
 #### 1.2 Código
@@ -72,36 +72,105 @@ Dame el segundo número
 3 + 4 = 7
 ```
 
-### Ejercicio 1.3
+### Ejercicio 1.3. Una funcion que reciba dos numeros y la operacion, por argumentos dados al compilar el programa en la terminal.
 ### 1.1 Descripcion del ejercicio
-  
+  Se necesita crear una funcion que reciba dos numeros y la operacion a realizar dando los argumentos al momento de compilar el programa.
 #### 1.2 Código
 ```dart
+class Calculadora {
+  int o = 0;
+  int a = 0;
+  int b = 0;
+  int suma(int a, int b) => a + b; // Declarativa
+  int resta(int a, int b) => a - b;
+  int multi(int a, int b) => a * b;
+  double divi(int a, int b) => a / b;
+  void mensaje(res) {
+    print("El resultado es: $res");
+  }
 
+  void Calcular(int a, int b, String op) {
+    switch (op) {
+      case '+':
+        print(suma(a, b));
+        break;
+      case '*':
+        print(multi(a, b));
+        break;
+      case '/':
+        print(divi(a, b));
+        break;
+      case '-':
+        print(resta(a, b));
+        break;
+      default:
+        print("Opcion invalida");
+        break;
+    }
+  }
+}
 ```
  #### 1.3 Implementación
  ```dart
- 
+ void main(List<String> args) {
+  Calculadora calc = new Calculadora();
+  if (args.length == 3) {
+    var a = int.parse(args[0]);
+    var b = int.parse(args[1]);
+    calc.Calcular(a, b, args[2]);
+  } else {
+    print("Error de argumentos.");
+    print("Ejemplo: dart main.dart 3 15 +");
+  }
+}
  ```
 #### 1.4 Salida
 ```
-
+dart main.dart 9 8 +
+17
 ```
 
-### Ejercicio 1.4
+### Ejercicio 1.4. Crear una clase Persona que tenga las propiedades de nombre, apellido paterno, apellido materno y año de nacimiento, una funcion de calcular la edad y mostrar las propiedades del objeto en pantalla.
 ### 1.1 Descripcion del ejercicio
-  
+  Se necesita crear un objeto a partir de la clase Persona, tenga propiedades de nombre, apellido paterno, apellido materno, y año de nacimiento, con una funcion para mostrar los datos en pantalla y una funcion para calcular la edad.
 #### 1.2 Código
 ```dart
+class Persona {
+  String nombre = "";
+  String aPaterno = "";
+  String aMaterno = "";
+  int aNacimiento = 0;
 
+  int calcularEdad(int aNacimiento) => 2022 - aNacimiento;
+
+  void showName(String nombre, String aPaterno, String aMaterno) {
+    print("$aPaterno $aMaterno $nombre");
+  }
+
+  void showname2() {
+    print("$aPaterno $aMaterno $nombre");
+  }
+}
 ```
  #### 1.3 Implementación
  ```dart
- 
+ void main(List<String> args) {
+  Persona cristian = new Persona();
+  cristian.aMaterno = "Bravo";
+  cristian.aPaterno = "Larios";
+  cristian.nombre = "Cristian";
+  cristian.aNacimiento = 2003;
+
+  cristian.showName(cristian.nombre, cristian.aPaterno, cristian.aMaterno);
+  print("Tienes ${cristian.calcularEdad(cristian.aNacimiento)} años");
+  cristian.showname2();
+}
  ```
 #### 1.4 Salida
 ```
-
+Larios Bravo Cristian
+Tienes 19 años
+Larios Bravo Cristian
 ```
 
 ### Ejercicio 1.5
